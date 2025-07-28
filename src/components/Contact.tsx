@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Heart } from 'lucide-react';
+import { Mail, Github, Linkedin} from 'lucide-react';
 
 export const Contact = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ export const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Let's Connect</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate on something amazing? I'd love to hear from you.
+            Ready to collaborate on something amazing? <br /> I'd love to hear from you.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export const Contact = () => {
             {/* Contact Links */}
             <div className="flex justify-center gap-6">
               <a
-                href="mailto:vihaan.shah@northwestern.edu"
+                href="mailto:vihaanshah2026@u.northwestern.edu"
                 className="group flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-muted/50 transition-all duration-200"
                 aria-label="Send email"
               >
@@ -31,7 +31,7 @@ export const Contact = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/vihaanshah"
+                href="https://linkedin.com/in/shah-vihaan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-muted/50 transition-all duration-200"
@@ -46,7 +46,7 @@ export const Contact = () => {
               </a>
 
               <a
-                href="https://github.com/vihaanshah"
+                href="https://github.com/VihaanShah26"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-muted/50 transition-all duration-200"
@@ -62,27 +62,25 @@ export const Contact = () => {
             </div>
 
             {/* Direct Contact */}
-            <div className="space-y-4 pt-6 border-t border-border">
+            {/* <div className="space-y-4 pt-6 border-t border-border">
               <p className="text-muted-foreground">
                 Prefer to reach out directly?
               </p>
               <a 
-                href="mailto:vihaan.shah@northwestern.edu"
+                href="mailto:vihaanshah2026@u.northwestern.edu"
                 className="btn-primary inline-flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
                 Send me an email
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-border">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
-            © {currentYear} Vihaan Shah • Built with{' '}
-            <Heart className="w-4 h-4 text-red-500 inline" />
-            {' '}& React
+            © {currentYear} Vihaan Shah
           </p>
         </div>
       </div>

@@ -1,37 +1,71 @@
 import { useState } from 'react';
-import { GraduationCap, Award, BookOpen } from 'lucide-react';
+import { GraduationCap, Award, BookOpen, ExternalLink, FileText } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const tabs = [
   { id: 'overview', label: 'Overview', icon: GraduationCap },
   { id: 'honors', label: 'Honors & Awards', icon: Award },
   { id: 'coursework', label: 'Coursework', icon: BookOpen },
+  { id: 'certifications', label: 'Certifications', icon: FileText },
 ];
 
 const coursework = [
-  'Algorithms & Data Structures',
-  'Operating Systems',
-  'Distributed Systems',
-  'Database Systems',
-  'Computer Networks',
-  'Machine Learning',
-  'Software Engineering',
-  'Computer Graphics',
-  'Artificial Intelligence',
-  'Cybersecurity',
-  'Mobile Development',
-  'Web Development',
-  'Cloud Computing',
-  'DevOps & CI/CD',
-  'Financial Economics',
-  'Microeconomics',
+  "Data Structures and Algorithms",
+  "Object-Oriented Programming",
+  "Discrete Math",
+  "Computer Systems",
+  "Scalable Software Architecture",
+  "Programming Languages",
+  "Human-Computer Interaction",
+  "Design and Analysis of Algorithms",
+  "Computer Networking",
+  "Social Networks Analysis",
+  "Operating Systems",
+  "Distributed Systems",
+  "Microcontroller System Design",
+  "Artificial Intelligence Fundamentals",
+  "Machine Learning Fundamentals",
+  "Computer System Security",
+  "Parallel Computing using OpenMP",
+  "Parallel Programming with CUDA",
+  "Game Design and Development",
+  "Rapid Software Programming",
+  "Software Engineering Principles",
+  "Agile Software Development",
+  "Autonomous Quadrotor Design",
+  "Kernel and Low-Level Development",
+  "Neural Networks",
+  "Deep Learning for NLP"
 ];
 
 const honors = [
-  'Dean\'s List - Fall 2023, Winter 2024',
-  'Northwestern Merit Scholarship Recipient',
-  'Outstanding Academic Achievement Award',
-  'Computer Science Department Honor Roll',
-  'Kellogg School Certificate Program Scholar',
+  'Dean\'s List - 8 quarters',
+  'Oracle Idea-a-thon - 1st Place',
+  'Distinction in Communcation Skills from Trinity College London',
+  'Hong Kong International Mathematics Olympiad - Gold Medal',
+  'Thailand International Mathematics Olympiad - Silver Medal',
+  'Northwestern University Trading Competition - 3rd Place',
+];
+
+const certifications = [
+  {
+    name: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
+    organization: 'Oracle',
+    date: 'July 2025',
+    url: 'src/assets/certificates/OCI-fundamentals.pdf'
+  },
+  {
+    name: 'Oracle Certified Generative AI Professional',
+    organization: 'Oracle',
+    date: 'July 2025',
+    url: 'src/assets/certificates/OCI-genai.pdf'
+  },
+  {
+    name: 'Retrieval-Augmented Generation (RAG) with Embeddings and Vector Databases',
+    organization: 'Scrimba',
+    date: 'June 2025',
+    url: 'src/assets/certificates/RAG.pdf'
+  }
 ];
 
 export const Education = () => {
@@ -43,7 +77,7 @@ export const Education = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">Education</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Building a strong foundation in computer science and business at Northwestern University
+            Building a strong foundation in computer science and finance <br /> at Northwestern University
           </p>
         </div>
 
@@ -90,23 +124,30 @@ export const Education = () => {
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium">B.S. Computer Science</h4>
-                      <p className="text-sm text-muted-foreground">Expected June 2026</p>
+                      <p className="text-sm text-muted-foreground">Robert R. McCormick School of Engineering and Applied Science</p>
+                      <p className="text-sm text-muted-foreground">Sept 2022 - June 2026</p>
                     </div>
                     
                     <div>
                       <h4 className="font-medium">M.S. Computer Science</h4>
-                      <p className="text-sm text-muted-foreground">Combined Program</p>
+                      <p className="text-sm text-muted-foreground">Robert R. McCormick School of Engineering and Applied Science</p>
+                      <p className="text-sm text-muted-foreground">Feb 2025 - June 2026</p>
                     </div>
                     
                     <div>
                       <h4 className="font-medium">Certificate in Financial Economics</h4>
                       <p className="text-sm text-muted-foreground">Kellogg School of Management</p>
+                      <p className="text-sm text-muted-foreground">April 2025 - June 2026</p>
                     </div>
                   </div>
-                  
-                  <div className="inline-block">
-                    <span className="tag-chip font-semibold">GPA 3.95/4.0</span>
-                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <span className="tag-chip text-center">
+                      Major GPA 3.94/4.0
+                    </span>
+                    <span className="tag-chip text-center">
+                      CGPA 3.82/4.0
+                    </span>
+                </div>
                 </div>
               </div>
             )}
@@ -133,6 +174,32 @@ export const Education = () => {
                     <span key={index} className="tag-chip text-center">
                       {course}
                     </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {activeTab === 'certifications' && (
+              <div>
+                <h3 className="text-xl font-semibold mb-6">Certifications</h3>
+                <div className="space-y-4">
+                  {certifications.map((cert, index) => (
+                    <div key={index} className="flex items-center justify-between p-4 bg-muted/30 rounded-lg border border-border/50">
+                      <div className="flex-1">
+                        <h4 className="font-medium text-foreground mb-1">{cert.name}</h4>
+                        <p className="text-sm text-muted-foreground mb-1">{cert.organization}</p>
+                        <p className="text-xs text-muted-foreground">{cert.date}</p>
+                      </div>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="flex items-center gap-2"
+                        onClick={() => window.open(cert.url, '_blank')}
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        View Certificate
+                      </Button>
+                    </div>
                   ))}
                 </div>
               </div>

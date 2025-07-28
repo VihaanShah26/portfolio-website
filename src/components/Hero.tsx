@@ -1,5 +1,5 @@
 import { Mail, FileText, ExternalLink } from 'lucide-react';
-import heroImage from '@/assets/hero-portrait.jpg';
+import heroImage from '@/assets/vihaan.jpg';
 
 export const Hero = () => {
   return (
@@ -12,7 +12,6 @@ export const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
                 Hi, I'm{' '}
                 <span className="gradient-text">Vihaan Shah</span>
-                {' '}— I build fast, reliable software.
               </h1>
               
               <div className="text-lg md:text-xl text-muted-foreground max-w-2xl">
@@ -30,14 +29,14 @@ export const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
               <a 
-                href="mailto:vihaan.shah@example.com" 
+                href="mailto:vihaanshah2026@u.northwestern.edu" 
                 className="btn-primary inline-flex items-center justify-center gap-2"
               >
                 <Mail className="w-5 h-5" />
                 Email Me
               </a>
               <a 
-                href="/resume.pdf" 
+                href="src/assets/Shah_Vihaan_Resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center justify-center gap-2"
@@ -57,10 +56,6 @@ export const Hero = () => {
               <div className="text-center">
                 <div className="text-2xl font-semibold text-primary">15+</div>
                 <div className="text-sm text-muted-foreground">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-semibold text-primary">3.95/4.0</div>
-                <div className="text-sm text-muted-foreground">GPA</div>
               </div>
             </div>
           </div>

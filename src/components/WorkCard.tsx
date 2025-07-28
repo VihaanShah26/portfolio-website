@@ -7,7 +7,7 @@ interface WorkCardProps {
   period: string;
   description: string;
   skills: string[];
-  highlights: string[];
+  detailedDescription: string;
   logo?: string;
   companyUrl?: string;
 }
@@ -18,7 +18,7 @@ export const WorkCard = ({
   period, 
   description, 
   skills, 
-  highlights,
+  detailedDescription,
   logo,
   companyUrl 
 }: WorkCardProps) => {
@@ -93,12 +93,13 @@ export const WorkCard = ({
           {/* Expanded Content */}
           {isExpanded && (
             <div className="mt-4 pt-4 border-t border-border space-y-2 animate-fade-in">
-              {highlights.map((highlight, index) => (
+              {/* {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <span className="text-muted-foreground">{highlight}</span>
                 </div>
-              ))}
+              ))} */}
+              <p className="text-muted-foreground mb-4">{detailedDescription}</p>
             </div>
           )}
         </div>
