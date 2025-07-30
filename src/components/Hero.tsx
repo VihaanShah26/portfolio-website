@@ -36,7 +36,7 @@ export const Hero = () => {
                 Email Me
               </a>
               <a 
-                href="src/assets/Shah_Vihaan_Resume.pdf" 
+                href="/Shah_Vihaan_Resume.pdf" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary inline-flex items-center justify-center gap-2"
