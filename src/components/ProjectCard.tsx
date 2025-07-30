@@ -8,6 +8,7 @@ interface ProjectCardProps {
   githubUrl?: string;
   liveUrl?: string;
   imageUrl?: string;
+  paperUrl?: string
 }
 
 export const ProjectCard = ({
@@ -17,7 +18,8 @@ export const ProjectCard = ({
   technologies,
   githubUrl,
   liveUrl,
-  imageUrl
+  imageUrl,
+  paperUrl
 }: ProjectCardProps) => {
   return (
     <div className="group card-portfolio overflow-hidden">
@@ -57,6 +59,17 @@ export const ProjectCard = ({
               rel="noopener noreferrer"
               className="btn-secondary p-3 bg-white/90 text-gray-900 hover:bg-white"
               aria-label="View live demo"
+            >
+              <Eye className="w-5 h-5" />
+            </a>
+          )}
+          {paperUrl && (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary p-3 bg-white/90 text-gray-900 hover:bg-white"
+              aria-label="View paper"
             >
               <Eye className="w-5 h-5" />
             </a>
@@ -106,6 +119,17 @@ export const ProjectCard = ({
             >
               <ExternalLink className="w-4 h-4" />
               Live Demo
+            </a>
+          )}
+          {paperUrl && (
+            <a
+              href={paperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-150 inline-flex items-center gap-1 text-sm"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Paper
             </a>
           )}
         </div>

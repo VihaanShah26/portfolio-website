@@ -2,48 +2,55 @@ import { ProjectCard } from './ProjectCard';
 
 const projects = [
   {
-    title: 'Distributed Task Scheduler',
-    subtitle: 'High-performance job orchestration system',
-    description: 'Built a distributed task scheduling system using Go and Redis that can handle 10,000+ concurrent jobs with fault tolerance and automatic recovery mechanisms.',
-    technologies: ['Go', 'Redis', 'Docker', 'Kubernetes', 'gRPC'],
-    githubUrl: 'https://github.com/vihaanshah/task-scheduler',
+    title: 'Nautilus Kernel',
+    subtitle: 'Porting Nautilus Kernel from 64-bit to 32-bit ARM Cortex-M Architecture',
+    description: `
+    The authors port Nautilus from 64-bit ARM to a 32-bit Cortex-M33 by crafting a bare-metal GCC toolchain, refactoring all 64-bit data types and atomic primitives, and writing a Thumb‑mode bootloader and linker script tailored to the new memory layout. Their nautilus.bin already boots on the MPS2‑AN505 board and runs comfortably within its 4 MB RAM budget; the remaining work is simply wiring the final branch to kernel initialization and adding minimal exception handlers to yield a fully operational embedded aerokernel.
+    `,
+    technologies: ['Low-Level Development', 'Boot Process', 'Linux', 'Memory Management', 'Assembly', 'Debugging'],
+    githubUrl: 'https://github.com/VihaanShah26/nautilus',
+    paperUrl: 'https://drive.google.com/file/d/1CRLXmeARuJuOL6dsooro1rpyEnrZdsL-/view?usp=sharing',
+    imageUrl: 'src/assets/projects/nautilus.png'
   },
   {
-    title: 'Real-time Analytics Dashboard',
-    subtitle: 'Live data visualization platform',
+    title: 'Mazebot Swarm',
+    subtitle: 'Maze Solving through Concurrent Exploration and Radio Communication',
     description: 'Developed a real-time analytics dashboard for e-commerce metrics using React and WebSocket connections, processing 1M+ events per hour.',
-    technologies: ['React', 'TypeScript', 'WebSocket', 'D3.js', 'Node.js'],
-    githubUrl: 'https://github.com/vihaanshah/analytics-dashboard',
-    liveUrl: 'https://analytics-demo.vihaanshah.dev',
+    technologies: ['Microcontrollers', 'RF Communication', 'IR Sensors', 'Ultrasonic Sensors', 'C'],
+    // githubUrl: 'https://github.com/vihaanshah/analytics-dashboard',
+    imageUrl: 'src/assets/projects/maze.png'
   },
   {
-    title: 'Smart Home IoT Platform',
-    subtitle: 'Connected device management system',
+    title: 'ScoreSight',
+    subtitle: 'Sports Analysis Software',
     description: 'Created an IoT platform for smart home devices with mobile app, supporting 50+ device types and implementing end-to-end encryption.',
-    technologies: ['Python', 'React Native', 'MQTT', 'PostgreSQL', 'AWS IoT'],
-    githubUrl: 'https://github.com/vihaanshah/smart-home',
+    technologies: ['Python', 'Pandas', 'Decision Trees', 'OpenAI API', 'Audio Processing', 'Data Processing'],
+    imageUrl: 'src/assets/projects/sports.webp',
   },
   {
-    title: 'Machine Learning Trading Bot',
-    subtitle: 'Algorithmic trading system',
+    title: 'Lines N\' Lyrix',
+    subtitle: 'Song Guessing Game',
     description: 'Designed and implemented an ML-powered trading bot using Python and TensorFlow, achieving 12% annualized returns on paper trading.',
     technologies: ['Python', 'TensorFlow', 'Pandas', 'Alpaca API', 'Docker'],
-    githubUrl: 'https://github.com/vihaanshah/trading-bot',
+    githubUrl: 'https://github.com/VihaanShah26/LinesNLyrix',
+    imageUrl: 'src/assets/projects/linesnlyrix.png'
   },
   {
-    title: 'Campus Event Platform',
-    subtitle: 'University event discovery app',
+    title: 'Botify',
+    subtitle: 'Music Recommendation System',
     description: 'Built a full-stack web application for Northwestern students to discover and create campus events, serving 2,000+ active users.',
     technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
     githubUrl: 'https://github.com/vihaanshah/campus-events',
     liveUrl: 'https://nu-events.vihaanshah.dev',
+    imageUrl: 'src/assets/projects/botify.png'
   },
   {
-    title: 'Code Collaboration Platform',
-    subtitle: 'Real-time code sharing tool',
+    title: 'NU Maps',
+    subtitle: 'Northwestern University Campus Navigation',
     description: 'Developed a collaborative coding platform with real-time editing, code execution, and video chat features for remote programming sessions.',
     technologies: ['React', 'Socket.io', 'Monaco Editor', 'Node.js', 'WebRTC'],
     githubUrl: 'https://github.com/vihaanshah/code-collab',
+    imageUrl: 'src/assets/projects/numaps.png'
   },
 ];
 
