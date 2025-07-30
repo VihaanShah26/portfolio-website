@@ -10,7 +10,7 @@ const projects = [
     technologies: ['Low-Level Development', 'Boot Process', 'Linux', 'Memory Management', 'Assembly', 'Debugging'],
     githubUrl: 'https://github.com/VihaanShah26/nautilus',
     paperUrl: 'https://drive.google.com/file/d/1CRLXmeARuJuOL6dsooro1rpyEnrZdsL-/view?usp=sharing',
-    imageUrl: 'src/assets/projects/nautilus.png'
+    imageUrl: '/projects/nautilus.png'
   },
   {
     title: 'Mazebot Swarm',
@@ -18,14 +18,14 @@ const projects = [
     description: 'Developed a real-time analytics dashboard for e-commerce metrics using React and WebSocket connections, processing 1M+ events per hour.',
     technologies: ['Microcontrollers', 'RF Communication', 'IR Sensors', 'Ultrasonic Sensors', 'C'],
     // githubUrl: 'https://github.com/vihaanshah/analytics-dashboard',
-    imageUrl: 'src/assets/projects/maze.png'
+    imageUrl: '/projects/maze.png'
   },
   {
     title: 'ScoreSight',
     subtitle: 'Sports Analysis Software',
     description: 'Created an IoT platform for smart home devices with mobile app, supporting 50+ device types and implementing end-to-end encryption.',
     technologies: ['Python', 'Pandas', 'Decision Trees', 'OpenAI API', 'Audio Processing', 'Data Processing'],
-    imageUrl: 'src/assets/projects/sports.webp',
+    imageUrl: '/projects/sports.webp',
   },
   {
     title: 'Lines N\' Lyrix',
@@ -33,7 +33,7 @@ const projects = [
     description: 'Designed and implemented an ML-powered trading bot using Python and TensorFlow, achieving 12% annualized returns on paper trading.',
     technologies: ['Python', 'TensorFlow', 'Pandas', 'Alpaca API', 'Docker'],
     githubUrl: 'https://github.com/VihaanShah26/LinesNLyrix',
-    imageUrl: 'src/assets/projects/linesnlyrix.png'
+    imageUrl: '/projects/linesnlyrix.png'
   },
   {
     title: 'Botify',
@@ -42,7 +42,7 @@ const projects = [
     technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Vercel'],
     githubUrl: 'https://github.com/vihaanshah/campus-events',
     liveUrl: 'https://nu-events.vihaanshah.dev',
-    imageUrl: 'src/assets/projects/botify.png'
+    imageUrl: '/projects/botify.png'
   },
   {
     title: 'NU Maps',
@@ -50,7 +50,7 @@ const projects = [
     description: 'Developed a collaborative coding platform with real-time editing, code execution, and video chat features for remote programming sessions.',
     technologies: ['React', 'Socket.io', 'Monaco Editor', 'Node.js', 'WebRTC'],
     githubUrl: 'https://github.com/vihaanshah/code-collab',
-    imageUrl: 'src/assets/projects/numaps.png'
+    imageUrl: '/projects/numaps.png'
   },
 ];
 
